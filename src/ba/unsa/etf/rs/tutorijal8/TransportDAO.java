@@ -14,7 +14,7 @@ public class TransportDAO {
     private ArrayList<Driver> vozaci = new ArrayList<>();
     private static TransportDAO instance = null;
     private static Connection connection;
-    private PreparedStatement upit1, upit2, statement1, brisanje, driveri;
+    private PreparedStatement upit1, upit2, statement1, brisanje, driveri, jmb;
     
     private TransportDAO() {
         try {
@@ -24,6 +24,7 @@ public class TransportDAO {
                 upit2 = connection.prepareStatement("SELECT * FROM BUSES;");
                 brisanje = connection.prepareStatement("DELETE FROM BUSES WHERE Proizvodjac=? AND Serija=? AND BrojSjedista=?;");
                 driveri = connection.prepareStatement("SELECT * FROM DRIVERS;");
+                jmb = connection.prepareStatement("SELECT * FROM DRIVERS WHERE jmb=?;");
             } catch (SQLException e) {
                 regenerateDatabase();
             } finally {
@@ -128,6 +129,15 @@ public class TransportDAO {
     }
 
     public void addDriver(Driver driver) {
+
+        try {
+            jmb.setString(1,driver.getJmb());
+            ResultSet jm = jmb.executeQuery();
+            if(jm.next()) throw new IllegalArgumentException("Taj vozač već postoji!");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
         try {
             upit1 = connection.prepareStatement("INSERT INTO DRIVERS VALUES(?,?,?,?,?,?);");
             upit1.setString(2, driver.getName());
