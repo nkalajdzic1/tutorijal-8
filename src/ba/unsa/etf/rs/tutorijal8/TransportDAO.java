@@ -14,14 +14,16 @@ public class TransportDAO {
     private ArrayList<Driver> vozaci = new ArrayList<>();
     private static TransportDAO instance = null;
     private static Connection connection;
-    private PreparedStatement upit1, upit2, statement1;
+    private PreparedStatement upit1, upit2, statement1, brisanje, driveri;
     
     private TransportDAO() {
         try {
             connection = DriverManager.getConnection("jdbc:sqlite:baza.db");
             try {
-                upit1 = connection.prepareStatement("SELECT * FROM DRIVERS");
-                upit2 = connection.prepareStatement("SELECT * FROM BUSES");
+                upit1 = connection.prepareStatement("SELECT * FROM DRIVERS;");
+                upit2 = connection.prepareStatement("SELECT * FROM BUSES;");
+                brisanje = connection.prepareStatement("DELETE FROM BUSES WHERE Proizvodjac=? AND Serija=? AND BrojSjedista=?;");
+                driveri = connection.prepareStatement("SELECT * FROM DRIVERS;");
             } catch (SQLException e) {
                 regenerateDatabase();
             } finally {
@@ -127,24 +129,37 @@ public class TransportDAO {
 
     public void addDriver(Driver driver) {
         try {
-            Statement statemaent = connection.createStatement();
-            for(int i=0;i<vozaci.size();i++) {
-                if(driver.getJmb() == vozaci.get(i).getJmb()) {
-                    throw new IllegalArgumentException("Taj vozač već postoji!");
-                }
-            }
-
-            statemaent.executeUpdate("INSERT INTO DRIVERS (Ime,Prezime,JMB,DatumRodjenja,DatumZaposlenja) " +
-                    "VALUES('" + driver.getName() + "','" + driver.getSurname() + "','" + driver.getJmb() + "','" + driver.getBirthday() +
-                     "','" + driver.getDatumZaposlenja() + "')");
-            vozaci.add(driver);
+            upit1 = connection.prepareStatement("INSERT INTO DRIVERS VALUES(?,?,?,?,?,?);");
+            upit1.setString(2, driver.getName());
+            upit1.setString(3, driver.getSurname());
+            upit1.setString(4, driver.getJmb());
+            upit1.setString(5, String.valueOf(Date.valueOf(driver.getBirthday())));
+            upit1.setString(6, String.valueOf(Date.valueOf(driver.getDatumZaposlenja())));
+            upit1.executeUpdate();
         } catch(SQLException e) {
             e.printStackTrace();
         }
     }
 
     public ArrayList<Driver> getDrivers() {
-        return vozaci;
+        ArrayList<Driver> lista = new ArrayList<>();
+        try {
+            ResultSet rez = driveri.executeQuery();
+            while(rez.next()) {
+                Driver driver = new Driver(rez.getString(2), rez.getString(3), rez.getString(4),LocalDate.parse(rez.getString(5)),
+                        LocalDate.parse(rez.getString(6)));
+                lista.add(driver);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return lista;
+    }
+
+
+
+    private Driver dodajDriverIzResultSeta(ResultSet rs) throws SQLException {
+        return new Driver(rs.getString(1), rs.getString(2),rs.getString(3), rs.getDate(4).toLocalDate(),rs.getDate(5).toLocalDate());
     }
 
     public void addBus(Bus bus) {
@@ -160,24 +175,26 @@ public class TransportDAO {
     }
 
     public ArrayList<Bus> getBusses() {
-
+        ArrayList<Bus> lista = new ArrayList<>();
         try {
             ResultSet rez = upit2.executeQuery();
             while(rez.next()) {
                 Bus bus = new Bus(rez.getInt(1), rez.getString(2), rez.getString(3), rez.getInt(4));
-                busevi.add(bus);
+                lista.add(bus);
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return busevi;
+        return lista;
     }
 
     public void deleteBus(Bus bus) {
+
         try {
-            Statement statemaent = connection.createStatement();
-            statemaent.executeUpdate("DELETE FROM BUSES WHERE id = '" + bus.getId() + "'");
-            busevi.remove(bus);
+            brisanje.setString(1, bus.getMaker());
+            brisanje.setString(2, bus.getSeries());
+            brisanje.setInt(3, bus.getSeatNumber());
+            brisanje.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         }
