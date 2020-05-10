@@ -1,11 +1,11 @@
 package ba.unsa.etf.rs.tutorijal8;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 public class Driver {
     private String ime, prezime, jmb;
     private LocalDate datumRodjenja, datumZaposljenja;
+    private int id;
 
     public Driver(String ime, String prezime, String jmb, LocalDate datumRodjenja, LocalDate datumZaposljenja) {
         this.ime = ime;
@@ -13,6 +13,19 @@ public class Driver {
         this.jmb = jmb;
         this.datumRodjenja = datumRodjenja;
         this.datumZaposljenja = datumZaposljenja;
+    }
+
+    public Driver(int id, String ime, String prezime, String jmb, LocalDate datumRodjenja, LocalDate datumZaposljenja) {
+        this.ime = ime;
+        this.prezime = prezime;
+        this.jmb = jmb;
+        this.datumRodjenja = datumRodjenja;
+        this.datumZaposljenja = datumZaposljenja;
+        this.id = id;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public String getIme() {
@@ -33,5 +46,13 @@ public class Driver {
 
     public LocalDate getBirthday() {
         return datumRodjenja;
+    }
+
+    public String getDatumZaposlenja() {
+        return datumZaposljenja.toString();
+    }
+
+    public String getSurname() {
+        return prezime;
     }
 }

@@ -10,6 +10,7 @@ public class Main {
     private static TransportDAO dao ;
 
     public static void main(String[] args) {
+
         dao = TransportDAO.getInstance();
         Scanner tok = new Scanner(System.in);
         String result="";

@@ -7,6 +7,14 @@ public class Bus {
     private String proizvodjac, serija;
     private int brojSjedista;
     private ArrayList<Driver> vozaci;
+    private int id;
+
+    public Bus(int id, String proizvodjac, String serija, int brojSjedista) {
+        this.proizvodjac = proizvodjac;
+        this.serija = serija;
+        this.brojSjedista = brojSjedista;
+        this.id = id;
+    }
 
     public Bus(String proizvodjac, String serija, int brojSjedista) {
         this.proizvodjac = proizvodjac;
@@ -40,5 +48,13 @@ public class Bus {
 
     public int getSeatNumber() {
         return brojSjedista;
+    }
+
+    public String getSeries() {
+        return serija;
+    }
+
+    public int getId() {
+        return id;
     }
 }
