@@ -1,45 +1,23 @@
 package ba.unsa.etf.rs.tutorijal8;
 
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.Scanner;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
-public class Main {
-
-    private static TransportDAO dao ;
-
-    public static void main(String[] args) {
-
-        dao = TransportDAO.getInstance();
-        Scanner tok = new Scanner(System.in);
-        String result="";
-        while (tok.hasNextLine()) {
-            result = tok.nextLine();
-            switch (result){
-                case "dodaj vozaca":
-                    dodajVozaca(tok);
-                    break;
-                case "dodaj autobus":
-                    dodajAutobus(tok);
-                    break;
-                case "otpusti vozaca":
-                    otpustiVozaca(tok);
-                    break;
-                case "ukloni autobus":
-                    ukloniAutobus(tok);
-                    break;
-                case "Dodijeli vozaca autobusu":
-                    dodijeliAutobusVozacu(tok);
-                    break;
-                case "Ispisi autobuse":
-                    ispisiAutobuse();
-                    break;
-
-            }
-        }
+public class Main extends Application {
+    @Override
+    public void start(Stage primaryStage) throws Exception{
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/glavni.fxml"));
+        primaryStage.setTitle("ETP");
+        primaryStage.setScene(new Scene(root, 600, 420));
+        primaryStage.show();
     }
 
+    public static void main(String[] args) { launch(args);}
+
+    /*
     private static void ispisiAutobuse() {
         ArrayList<Bus> busses = dao.getBusses();
         for (int i = 0; i < busses.size(); i++) {
@@ -106,5 +84,5 @@ public class Main {
         LocalDate birthday = LocalDate.parse(stream.nextLine(), DateTimeFormatter.ofPattern("d.M.yyyy"));
         LocalDate hireDate = LocalDate.parse(stream.nextLine(), DateTimeFormatter.ofPattern("d.M.yyyy"));
         dao.addDriver(new Driver(name, surname, umcn, birthday, hireDate));
-    }
+    }*/
 }
