@@ -30,11 +30,11 @@
       <Label alignment="CENTER" contentDisplay="RIGHT" prefHeight="70.0" prefWidth="100.0" text="JMB:" textAlignment="RIGHT" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
       <Label alignment="CENTER" contentDisplay="RIGHT" prefHeight="75.0" prefWidth="100.0" text="Datum rođenja:" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
       <Label alignment="CENTER" prefHeight="68.0" prefWidth="115.0" text="Datum zaposlenja:" GridPane.halignment="RIGHT" GridPane.rowIndex="5" />
-      <TextField fx:id="fldIme" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-      <TextField fx:id="fldPrezime" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-      <TextField fx:id="fldJMB" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-      <TextField fx:id="fldDatumRodjenja" text="yyy-MM-dd" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-      <TextField fx:id="fldDatumZaposlenja" text="yyy-MM-dd" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+      <TextField fx:id="fldIme" promptText="..." GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <TextField fx:id="fldPrezime" promptText="..." GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <TextField fx:id="fldJMB" promptText="..." GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <TextField fx:id="fldDatumRodjenja" promptText="yyy-MM-dd" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+      <TextField fx:id="fldDatumZaposlenja" promptText="yyy-MM-dd" GridPane.columnIndex="1" GridPane.rowIndex="5" />
       <Button fx:id="btnDodajVozaca" mnemonicParsing="false" onAction="#dodajVozaca" prefHeight="21.0" prefWidth="74.0" text="Dodaj" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5">
          <GridPane.margin>
             <Insets />

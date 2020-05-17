@@ -2,35 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="421d7fb7-fab3-48c2-b140-ac993b300cb0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Tutorijal_8/ba/unsa/etf/rs/tutorijal8/dodajVozaca.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Tutorijal_8/ba/unsa/etf/rs/tutorijal8/glavni.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Tutorijal_8/fxml/dodajAutobus.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Tutorijal_8/fxml/dodajVozaca.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Tutorijal_8/fxml/dodijeliVozacaAutobusu.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Tutorijal_8/fxml/glavni.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Tutorijal_8/fxml/ispisiAutobuse.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Tutorijal_8/fxml/otpustiVozaca.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Tutorijal_8/fxml/ukloniAutobus.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/fxml/dodajAutobus.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/fxml/dodajVozaca.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/fxml/dodijeliVozacaAutobusu.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/fxml/glavni.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/fxml/ispisiAutobuse.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/fxml/otpustiVozaca.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/fxml/ukloniAutobus.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ba/unsa/etf/rs/tutorijal8/dodajVozaca.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ba/unsa/etf/rs/tutorijal8/glavni.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Tutorijal_8/ba/unsa/etf/rs/tutorijal8/dodajAutobus.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ba/unsa/etf/rs/tutorijal8/dodajAutobus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/baza.db" beforeDir="false" afterPath="$PROJECT_DIR$/baza.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tutorijal_8/ba/unsa/etf/rs/tutorijal8/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tutorijal_8/ba/unsa/etf/rs/tutorijal8/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Tutorijal_8/ba/unsa/etf/rs/tutorijal8/PripremaTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Tutorijal_8/ba/unsa/etf/rs/tutorijal8/Zadatak1Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Tutorijal_8/ba/unsa/etf/rs/tutorijal8/Zadatak2Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/baza.db-journal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tutorijal_8/ba/unsa/etf/rs/tutorijal8/dodajVozaca.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tutorijal_8/ba/unsa/etf/rs/tutorijal8/dodajVozaca.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tutorijal_8/ba/unsa/etf/rs/tutorijal8/glavni.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tutorijal_8/ba/unsa/etf/rs/tutorijal8/glavni.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tutorijal_8/fxml/dodajAutobus.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tutorijal_8/fxml/dodajAutobus.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tutorijal_8/fxml/dodajVozaca.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tutorijal_8/fxml/dodajVozaca.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/fxml/dodajAutobus.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/fxml/dodajAutobus.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/fxml/dodajVozaca.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/fxml/dodajVozaca.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ba/unsa/etf/rs/tutorijal8/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ba/unsa/etf/rs/tutorijal8/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ba/unsa/etf/rs/tutorijal8/PripremaTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ba/unsa/etf/rs/tutorijal8/Zadatak1Test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ba/unsa/etf/rs/tutorijal8/Zadatak2Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ba/unsa/etf/rs/tutorijal8/glavni.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ba/unsa/etf/rs/tutorijal8/glavni.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,6 +199,8 @@
       <workItem from="1589741117288" duration="934000" />
       <workItem from="1589742054505" duration="3971000" />
       <workItem from="1589746072672" duration="16000" />
+      <workItem from="1589746373985" duration="2804000" />
+      <workItem from="1589749209533" duration="16000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1557517574894</created>
@@ -267,22 +253,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1589141386902" />
-    <state width="1493" height="215" key="GridCell.Tab.0.bottom" timestamp="1589746028649">
+    <state width="1493" height="215" key="GridCell.Tab.0.bottom" timestamp="1589749181364">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="215" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589746028649" />
-    <state width="1493" height="215" key="GridCell.Tab.0.center" timestamp="1589746028649">
+    <state width="1493" height="215" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589749181364" />
+    <state width="1493" height="215" key="GridCell.Tab.0.center" timestamp="1589749181364">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="215" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1589746028649" />
-    <state width="1493" height="215" key="GridCell.Tab.0.left" timestamp="1589746028649">
+    <state width="1493" height="215" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1589749181364" />
+    <state width="1493" height="215" key="GridCell.Tab.0.left" timestamp="1589749181364">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="215" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1589746028649" />
-    <state width="1493" height="215" key="GridCell.Tab.0.right" timestamp="1589746028649">
+    <state width="1493" height="215" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1589749181364" />
+    <state width="1493" height="215" key="GridCell.Tab.0.right" timestamp="1589749181364">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="215" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1589746028649" />
+    <state width="1493" height="215" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1589749181364" />
     <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1589146107522">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -299,10 +285,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1589146107522" />
-    <state x="249" y="0" key="SettingsEditor" timestamp="1589746086411">
+    <state x="249" y="0" key="SettingsEditor" timestamp="1589749224068">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1589746086411" />
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1589749224068" />
     <state x="498" y="306" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1589143052628">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -311,5 +297,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="209" y="33" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1589741156734" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1589748039551">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1589748039551" />
   </component>
 </project>
